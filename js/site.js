@@ -1,3 +1,4 @@
+/* (c) 2026 Wizarts BV, wizarts.be. Alle rechten voorbehouden. wzts-hlb0xmgljx */
 // Johan & Martine — site
 
 // Openingsuren in minuten. 0 = zondag. null = gesloten.
