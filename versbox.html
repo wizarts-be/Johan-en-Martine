@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="nl-BE">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Zo werkt de Versbox | Johan &amp; Martine</title>
+  <meta name="description" content="Bestel via de webshop en haal je bestelling op wanneer het jou past, in de Versbox in de gevel van slagerij Johan & Martine in Beervelde.">
+  <meta name="theme-color" content="#382f2d">
+  <link rel="icon" href="Assets/Branding/Logo-1.svg" type="image/svg+xml">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/light/style.css">
+
+  <link rel="stylesheet" href="css/site.css">
+  <script src="js/site.js" defer></script>
+</head>
+<body>
+
+  <a class="overslaan" href="#inhoud">Naar de inhoud</a>
+
+  <!-- ============ KOP ============ -->
+  <header class="kop" data-kop>
+    <div class="kop__binnen">
+      <a class="kop__logo" href="index.html" aria-label="Johan &amp; Martine, naar de startpagina">
+        <img src="Assets/Branding/Logo-Beige.svg" alt="" width="1488" height="674">
+      </a>
+
+      <nav class="kop__nav" id="menu" aria-label="Hoofdmenu">
+        <ul>
+          <li><a href="index.html#aanbod">Aanbod</a></li>
+          <li><a href="index.html#bbq">Feesten &amp; BBQ</a></li>
+          <li><a href="index.html#contact">Contact &amp; uren</a></li>
+          <!-- WEBSHOP: webshop.html vervangen door de link naar de externe webshop -->
+          <li class="kop__shop"><a class="knop knop--hesp" href="webshop.html" data-webshop><i class="ph-light ph-shopping-bag" aria-hidden="true"></i>Webshop</a></li>
+          <li class="kop__tel"><a href="tel:+3293555686"><i class="ph-light ph-phone" aria-hidden="true"></i>09 355 56 86</a></li>
+        </ul>
+      </nav>
+
+      <a class="kop__bel" href="tel:+3293555686" aria-label="Bel ons: 09 355 56 86"><i class="ph-light ph-phone" aria-hidden="true"></i></a>
+      <button class="kop__menu" type="button" aria-expanded="false" aria-controls="menu"><span>Menu</span></button>
+    </div>
+  </header>
+
+  <main id="inhoud">
+
+    <!-- ============ INTRO ============ -->
+    <section class="versbox__kop" aria-labelledby="versbox-titel">
+      <div>
+        <p class="hero__merk">Ophalen wanneer het jou past</p>
+        <h1 class="versbox__titel" id="versbox-titel">Zo werkt de Versbox.</h1>
+        <p class="hero__tekst">Bestel online en haal je bestelling op in de automaat in de gevel van onze winkel. Ook buiten de openingsuren.</p>
+        <div class="hero__knoppen">
+          <a class="knop knop--hesp knop--groot" href="webshop.html" data-webshop><i class="ph-light ph-shopping-bag" aria-hidden="true"></i>Naar de webshop</a>
+        </div>
+      </div>
+
+      <!-- FOTO: vervangen door de foto van de Versbox (wordt nog aangeleverd) -->
+      <figure class="versbox__foto">
+        <img src="Assets/Images/winkel-gevel.jpg" alt="De gevel van slagerij Johan &amp; Martine, waarin de Versbox verwerkt zit" width="1600" height="1066">
+      </figure>
+    </section>
+
+    <!-- ============ STAPPEN ============ -->
+    <section class="versbox__stappen" aria-labelledby="stappen-titel">
+      <h2 class="sectietitel" id="stappen-titel">In vier stappen</h2>
+
+      <ol class="stappen">
+        <li><strong>Bestel via onze webshop.</strong> Kies bij het afsluiten voor "Versbox".</li>
+        <li><strong>Wij maken je bestelling klaar.</strong> Je ontvangt een e-mail of sms met een betaalverzoek.</li>
+        <li><strong>Na je betaling krijg je een code.</strong></li>
+        <li><strong>Haal op wanneer het jou past.</strong> Tik je code in aan de automaat die verwerkt zit in de gevel van de winkel, en het vak met jouw bestelling gaat open.</li>
+      </ol>
+
+      <div>
+        <a class="knop knop--bruin knop--groot" href="webshop.html" data-webshop><i class="ph-light ph-shopping-bag" aria-hidden="true"></i>Bestel in de webshop</a>
+      </div>
+    </section>
+
+    <!-- ============ GOED OM TE WETEN ============ -->
+    <section class="versbox__info" aria-labelledby="info-titel">
+      <div>
+        <h2 class="sectietitel" id="info-titel">Goed om te weten</h2>
+        <ol class="weetjes">
+          <li><span>Je bestelling wordt klaargemaakt naargelang de voorraad.</span></li>
+          <li><span><strong>Opgelet:</strong> sommige artikels hebben een ander tijdslot om te bestellen. Broodjes kunnen tot 2 uur op voorhand besteld worden, traiteurgerechten tot 48 uur op voorhand.</span></li>
+          <li><span>Je bestelling blijft 24 uur beschikbaar in de automaat.</span></li>
+          <li><span>Problemen? Neem contact op via <a href="tel:+3293555686">09 355 56 86</a>.</span></li>
+        </ol>
+      </div>
+
+      <aside class="versbox__hulp" aria-labelledby="hulp-titel">
+        <h2 id="hulp-titel">Nog vragen?</h2>
+        <p>Ook voor andere zaken kan je steeds bij ons terecht.</p>
+        <a class="aanvraag__tel" href="tel:+3293555686"><i class="ph-light ph-phone" aria-hidden="true"></i>09 355 56 86</a>
+        <a class="aanvraag__mail" href="mailto:info@slagerijrogiers.be"><i class="ph-light ph-envelope-simple" aria-hidden="true"></i>info@slagerijrogiers.be</a>
+      </aside>
+    </section>
+
+  </main>
+
+  <!-- ============ VOET ============ -->
+  <footer class="voet">
+    <div class="voet__meta">
+      <p>© <span data-jaar>2026</span> Johan &amp; Martine · Slagerij &amp; traiteur · Beervelde-dorp 87, 9080 Lochristi · BTW BE0800 362 044</p>
+      <a href="index.html"><i class="ph-light ph-arrow-left" aria-hidden="true"></i> Terug naar de site</a>
+    </div>
+  </footer>
+
+</body>
+</html>

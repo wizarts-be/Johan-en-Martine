@@ -247,6 +247,12 @@ figure { margin: 0; }
   display: grid; gap: 1.25rem; max-width: 36rem; color: var(--beige-zacht);
 }
 .familie__tekst .groot { font-size: var(--t-groot); line-height: 1.4; color: var(--beige); }
+.familie__tekst h3 {
+  margin-top: 1.5rem; color: var(--hesp);
+  font-size: clamp(1.25rem, 1rem + 1vw, 1.75rem); font-weight: 800;
+  text-transform: uppercase; letter-spacing: -0.01em; line-height: 1;
+}
+.familie__tekst strong { color: var(--beige); font-weight: 700; }
 .familie__detail {
   grid-column: 7 / 11; grid-row: 3;
   margin-top: clamp(-9rem, -8vw, -3rem);
@@ -294,6 +300,7 @@ figure { margin: 0; }
 .tegel:hover > img { transform: scale(1.04); }
 .tegel h3 { font-size: var(--t-h3); margin-bottom: 0.75rem; }
 .tegel p { max-width: 32rem; }
+.tegel p + p { margin-top: 0.75rem; }
 
 .tegel--vlees { grid-row: 1 / 3; min-height: 38rem; }
 .tegel--vlees > img { object-position: 50% 30%; }
@@ -369,6 +376,16 @@ figure { margin: 0; }
 .feest__inhoud { grid-column: 2; padding: var(--sectie) var(--rand) 0 0; max-width: 46rem; }
 .feest__titel { font-size: var(--t-h2); }
 .feest__intro { margin-top: 1.75rem; font-size: var(--t-groot); line-height: 1.4; max-width: 34rem; }
+.feest__tekst { display: grid; gap: 1rem; margin-top: 1.25rem; max-width: 34rem; }
+.feest__groet { font-weight: 600; }
+.feest__knoppen { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 2rem; }
+.feest .knop--lijn { border-color: var(--bruin); color: var(--bruin); }
+.feest .knop--lijn:hover { background: var(--bruin); color: var(--beige); }
+.feest__vieren {
+  margin-top: clamp(4rem, 7vw, 6rem);
+  padding-top: clamp(2.5rem, 4vw, 3.5rem);
+  border-top: 1.5px solid var(--bruin);
+}
 
 .stappen { counter-reset: stap; margin-top: clamp(2.5rem, 4vw, 3.5rem); display: grid; gap: 1.75rem; }
 .stappen li {
@@ -403,6 +420,13 @@ figure { margin: 0; }
 }
 .aanvraag__tel i { font-size: 0.8em; }
 .aanvraag__tel:hover { opacity: 0.7; }
+.aanvraag__mail {
+  display: inline-flex; align-items: center; gap: 0.4em; margin-bottom: 1.25rem;
+  font-size: var(--t-groot); font-weight: 600; text-decoration: none;
+  border-bottom: 1.5px solid currentColor; overflow-wrap: anywhere;
+}
+.aanvraag__mail:hover { opacity: 0.7; }
+.aanvraag__tel + .aanvraag__mail { display: flex; width: fit-content; max-width: 100%; }
 .aanvraag p { font-size: var(--t-groot); line-height: 1.4; max-width: 34rem; }
 .feest :focus-visible { outline-color: var(--bruin); }
 
@@ -411,6 +435,29 @@ figure { margin: 0; }
   .feest__beeld { grid-row: auto; position: relative; height: auto; aspect-ratio: 3 / 2; }
   .feest__inhoud { grid-column: 1; padding: clamp(3.5rem, 10vw, 5rem) var(--rand) 0; }
   .aanvraag { grid-column: 1; margin-inline: var(--rand); }
+}
+
+/* ---------- Versbox (blok op de startpagina) ---------- */
+.versbox-blok { background: var(--bruin-diep); padding: var(--sectie) var(--rand); }
+.versbox-blok__raster {
+  max-width: var(--breedte); margin-inline: auto;
+  display: grid; grid-template-columns: 7fr 5fr; gap: clamp(3rem, 6vw, 6rem); align-items: center;
+}
+.versbox-blok__merk { color: var(--hesp); font-weight: 500; font-size: 1.0625rem; margin-bottom: 1.25rem; }
+.versbox-blok__tekst { max-width: 34rem; margin: 1.75rem 0 2.25rem; font-size: var(--t-groot); line-height: 1.4; }
+.versbox-blok__stappen { counter-reset: vb; display: grid; }
+.versbox-blok__stappen li {
+  counter-increment: vb;
+  display: grid; grid-template-columns: 3rem 1fr; gap: 1rem; align-items: baseline;
+  padding: 1.1rem 0; border-top: 1px solid var(--beige-lijn); color: var(--beige-zacht);
+}
+.versbox-blok__stappen li:last-child { border-bottom: 1px solid var(--beige-lijn); }
+.versbox-blok__stappen li::before {
+  content: counter(vb); color: var(--beige);
+  font-size: 2rem; font-weight: 800; line-height: 1;
+}
+@media (max-width: 860px) {
+  .versbox-blok__raster { grid-template-columns: 1fr; }
 }
 
 /* ---------- Bezoek ---------- */
@@ -431,6 +478,12 @@ figure { margin: 0; }
 .gegevens a { text-decoration: none; background: linear-gradient(currentColor, currentColor) 0 100% / 100% 1px no-repeat; }
 .gegevens a:hover { color: var(--licht); }
 
+.bezoek__knoppen { display: flex; flex-wrap: wrap; gap: 0.75rem; }
+.bezoek__kaart { margin-top: clamp(2rem, 4vw, 3rem); background: var(--bruin-diep); }
+.bezoek__kaart iframe {
+  display: block; width: 100%; aspect-ratio: 16 / 10; border: 0;
+  filter: grayscale(0.35) contrast(1.05);
+}
 .bezoek__rechts { align-self: start; }
 .bezoek__gevel img { width: 100%; aspect-ratio: 3 / 2; object-fit: cover; }
 .bezoek__uren {
@@ -487,6 +540,9 @@ figure { margin: 0; }
 .voet__uren dt { color: var(--beige-zacht); }
 .voet__uren .is-dicht dd { color: var(--beige-zacht); }
 .voet__blok a[href^="mailto"] { overflow-wrap: anywhere; }
+.voet__mail { font-size: 1.125rem; font-weight: 600; }
+.voet__fb { display: inline-flex; align-items: center; gap: 0.4em; }
+.voet__fb i { font-size: 1.25em; }
 .voet__merk { display: grid; gap: 1.25rem; align-content: start; }
 .voet__logo { width: clamp(9rem, 12vw, 12rem); }
 .voet__merk p { max-width: 17rem; color: var(--beige-zacht); }
@@ -565,3 +621,48 @@ figure { margin: 0; }
 }
 .binnenkort p { max-width: 32rem; color: var(--beige-zacht); font-size: var(--t-groot); }
 .binnenkort__knoppen { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.75rem; margin-top: 0.5rem; }
+
+/* ---------- Versbox ---------- */
+.versbox__kop {
+  max-width: var(--breedte); margin-inline: auto;
+  padding: calc(4.5rem + clamp(3rem, 8vw, 6rem)) var(--rand) var(--sectie);
+  display: grid; grid-template-columns: 6fr 5fr; gap: clamp(2.5rem, 6vw, 6rem); align-items: center;
+  box-sizing: content-box;
+}
+.versbox__kop > *, .versbox__info > * { min-width: 0; }
+.versbox__titel { font-size: var(--t-h1); font-weight: 900; text-transform: uppercase; letter-spacing: -0.02em; line-height: 0.88; }
+.versbox__kop .hero__tekst { animation: none; }
+.versbox__foto img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; }
+
+.versbox__stappen { background: var(--hesp); color: var(--bruin); padding: var(--sectie) var(--rand); }
+.versbox__stappen > * { max-width: var(--breedte); margin-inline: auto; }
+.versbox__stappen .stappen { grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); gap: 2.5rem clamp(1.5rem, 3vw, 3rem); }
+.versbox__stappen .stappen li { grid-template-columns: 1fr; align-content: start; row-gap: 0.5rem; }
+.versbox__stappen .stappen li::before { grid-row: auto; font-size: clamp(3.5rem, 2rem + 4vw, 5.5rem); }
+.versbox__stappen .knop { margin-top: clamp(2.5rem, 4vw, 3.5rem); }
+.versbox__stappen :focus-visible { outline-color: var(--bruin); }
+
+.versbox__info {
+  max-width: var(--breedte); margin-inline: auto; box-sizing: content-box;
+  padding: var(--sectie) var(--rand);
+  display: grid; grid-template-columns: 7fr 5fr; gap: clamp(3rem, 6vw, 6rem); align-items: start;
+}
+.weetjes { counter-reset: weetje; display: grid; margin-top: 2.5rem; }
+.weetjes li {
+  counter-increment: weetje;
+  display: grid; grid-template-columns: 2.5rem 1fr; gap: 1rem;
+  padding: 1.25rem 0; border-top: 1px solid var(--beige-lijn);
+  font-size: var(--t-groot); line-height: 1.4;
+}
+.weetjes li::before { content: counter(weetje); font-weight: 800; color: var(--hesp); }
+.weetjes strong { font-weight: 700; }
+.weetjes a { text-decoration: none; background: linear-gradient(currentColor, currentColor) 0 100% / 100% 1px no-repeat; white-space: nowrap; }
+
+.versbox__hulp { background: var(--bruin-diep); padding: clamp(1.75rem, 3vw, 2.5rem); }
+.versbox__hulp h2 { font-size: 1.125rem; font-weight: 600; }
+.versbox__hulp p { margin-top: 0.75rem; color: var(--beige-zacht); }
+.versbox__hulp .aanvraag__tel { font-size: clamp(2rem, 1.5rem + 2vw, 2.75rem); margin: 1.25rem 0 0.75rem; }
+
+@media (max-width: 860px) {
+  .versbox__kop, .versbox__info { grid-template-columns: 1fr; }
+}
