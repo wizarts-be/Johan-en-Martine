@@ -464,7 +464,7 @@ figure { margin: 0; }
   position: relative; z-index: 1;
   max-width: var(--breedte); margin-inline: auto;
   display: grid; grid-template-columns: 7fr 5fr;
-  grid-template-areas: "info uren" "kaart gevel";
+  grid-template-areas: "info uren" "kaart kaart";
   gap: clamp(2rem, 4vw, 3rem) clamp(3rem, 6vw, 6rem);
   padding-right: clamp(0rem, 12vw - 4rem, 12rem);
 }
@@ -479,7 +479,7 @@ figure { margin: 0; }
 .bezoek__knoppen { display: flex; flex-wrap: wrap; gap: 0.75rem; }
 .bezoek__kaart { grid-area: kaart; background: var(--bruin-diep); }
 .bezoek__kaart iframe {
-  display: block; width: 100%; height: 100%; border: 0;
+  display: block; width: 100%; aspect-ratio: 21 / 8; border: 0;
   filter: grayscale(0.35) contrast(1.05);
 }
 .bezoek__gevel { grid-area: gevel; }
@@ -511,8 +511,8 @@ figure { margin: 0; }
 }
 
 @media (max-width: 860px) {
-  .bezoek__raster { grid-template-columns: 1fr; grid-template-areas: "info" "uren" "gevel" "kaart"; padding-right: 0; }
-  .bezoek__kaart iframe { height: auto; aspect-ratio: 16 / 10; }
+  .bezoek__raster { grid-template-columns: 1fr; grid-template-areas: "info" "uren" "kaart"; padding-right: 0; }
+  .bezoek__kaart iframe { aspect-ratio: 16 / 10; }
   .bezoek { padding-bottom: clamp(14rem, 50vw, 18rem); }
 }
 
